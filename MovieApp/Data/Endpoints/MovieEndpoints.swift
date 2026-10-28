@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct ShowEndpoint: Endpoint {
+nonisolated struct ShowEndpoint: Endpoint {
     typealias Response = [ShowDTO]
     let page: Int
     var path: String { "shows" }
     var queryItems: [URLQueryItem] { [URLQueryItem(name: "page", value: String(page))] }
 }
 
-struct ShowDetailEndpoint: Endpoint {
+nonisolated struct ShowDetailEndpoint: Endpoint {
     typealias Response = ShowDTO
     
     let id: Int

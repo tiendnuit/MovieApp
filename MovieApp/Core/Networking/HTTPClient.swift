@@ -58,6 +58,7 @@ public struct APIClient: HTTPClient {
         
         return try await Self.decode(E.Response.self, from: data)
     }
+    
     @concurrent
     private static func decode<T: Decodable & Sendable>(_ type: T.Type, from data: Data) async throws(NetworkError) -> T {
         do {

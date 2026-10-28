@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Movie: Identifiable, Hashable, Sendable {
+nonisolated public struct Movie: Identifiable, Hashable, Sendable {
     public typealias ID = Int
     public let id: ID
     public let title: String
@@ -22,7 +22,7 @@ public struct Movie: Identifiable, Hashable, Sendable {
     }
 }
 
-public struct MovieCategory: Identifiable, Hashable, Sendable {
+nonisolated public struct MovieCategory: Identifiable, Hashable, Sendable {
     public let id: String
     public let title: String
     public let movies: [Movie]
@@ -34,7 +34,7 @@ public struct MovieCategory: Identifiable, Hashable, Sendable {
     }
 }
 
-public struct MovieDetail: Identifiable, Hashable, Sendable {
+nonisolated public struct MovieDetail: Identifiable, Hashable, Sendable {
     public let id: Movie.ID
     public let title: String
     public let subtitle: String

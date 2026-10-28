@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct ShowDTO: Decodable, Sendable, Equatable {
-    struct Rating: Decodable, Sendable, Equatable {
+nonisolated struct ShowDTO: Decodable, Sendable, Equatable {
+    nonisolated struct Rating: Decodable, Sendable, Equatable {
         let average: Double?
     }
     
-    struct Image: Decodable, Sendable, Equatable {
+    nonisolated struct Image: Decodable, Sendable, Equatable {
         let medium: URL?
         let original: URL?
     }
     
-    struct Network: Decodable, Sendable, Equatable {
+    nonisolated struct Network: Decodable, Sendable, Equatable {
         let name: String
     }
     

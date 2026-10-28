@@ -19,10 +19,10 @@ public actor RemoteMovieRepository: MovieRepository {
     private var detailCache: [Movie.ID: MovieDetail] = [:]
     
     public init(client: any HTTPClient) {
-        self.client = client
+        self.init(client: client, limits: .init())
     }
     
-    public init(client: any HTTPClient, limits: CatalogMapper.Limits) {
+    init(client: any HTTPClient, limits: CatalogMapper.Limits) {
         self.client = client
         self.limits = limits
     }

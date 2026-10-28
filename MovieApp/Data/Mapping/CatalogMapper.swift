@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CatalogMapper {
+nonisolated enum CatalogMapper {
     struct Limits: Sendable {
         var maxCategories = 8
         var maxMoviesPerCategory = 20

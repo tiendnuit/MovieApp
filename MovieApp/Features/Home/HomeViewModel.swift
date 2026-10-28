@@ -17,10 +17,9 @@ import Foundation
 @Observable
 public final class HomeViewModel {
     public private(set) var state: Loadable<[MovieCategory]> = .idle
-    @ObservationIgnored private let repository: any MovieRespository
+    @ObservationIgnored private let repository: any MovieRepository
     
-    public init(state: Loadable<[MovieCategory]>, repository: any MovieRespository) {
-        self.state = state
+    public init(repository: any MovieRepository) {
         self.repository = repository
     }
     
